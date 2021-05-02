@@ -1,4 +1,5 @@
-const Vue = require('vue')
+const Vue = require("vue") 
+
 
 let vueApp = new Vue({
     el: "#vueApp",
@@ -81,3 +82,4 @@ let vueApp = new Vue({
 module.exports = {
     runtimeCompiler: true
   }
+
