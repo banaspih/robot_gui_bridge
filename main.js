@@ -1,6 +1,6 @@
 const Vue = require("vue") 
 const hbs = require('hbs')
-const port = process.env.PORT || 8000
+const port = process.env.PORT || 3000
 const express = require('express')
 const app = express()
 
