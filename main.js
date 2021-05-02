@@ -1,5 +1,8 @@
 const Vue = require("vue") 
-
+const hbs = require('hbs')
+const port = process.env.PORT || 8000
+const express = require('express')
+const app = express()
 
 let vueApp = new Vue({
     el: "#vueApp",
@@ -83,3 +86,6 @@ module.exports = {
     runtimeCompiler: true
   }
 
+app.listen(port, () => {
+    console.log('Serving is up on'  + port)
+ })
