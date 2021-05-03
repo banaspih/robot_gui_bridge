@@ -80,4 +80,4 @@ let vueApp = new Vue({
 })
 
 
-module.exports = connection
+module.exports = vueApp

@@ -1,15 +1,19 @@
 //const Vue = require("vue") 
+
+
 const path = require('path')
 const hbs = require('hbs')
-const port = process.env.PORT || 3500
+const port = process.env.PORT || 3000
 const express = require('express')
 const app = express()
 const socketio = require('socket.io')
 
 const http = require('http')
+
 const server = http.createServer(app)
 const io = socketio(server)
 //const vueApp = require('./robot-connect/connect')
+
 const publicDirectoryPath = path.join(__dirname, '../template')
 app.use(express.static(publicDirectoryPath))
 
@@ -20,12 +24,17 @@ module.exports = {
   runtimeCompiler: true
 }
 
+
+
+
+
 io.on('connection', ()=> {
   console.log('New Websocket connection')
 })
 
+
 server.listen(port, () => {
-  console.log('Serving is up on' )
+  console.log('Serving is up on' +port )
 })
 
 

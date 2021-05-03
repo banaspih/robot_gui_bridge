@@ -1,5 +1,7 @@
+const vueApp = require("../robot-connect/connect")
+
 const ws = document.querySelector('form')
-const con = document.querySelector('connect')
+//const con = document.querySelector('connect')
 const messageOne = document.querySelector('#message-1')
 
 
@@ -12,7 +14,7 @@ const bridge = ws.addEventListener('submit', (e) => {
      if (error){
          messageOne.textContent =  'error'
      }else{
-         messageOne.textContent = 'connect'
+         messageOne.textContent = vueApp.connect
      }
  }) 
 })
