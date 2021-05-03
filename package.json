@@ -4,11 +4,16 @@
   "description": "",
   "main": "main.js",
   "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.2",
+    "http": "0.0.1-security",
+    "path": "^0.12.7",
+    "socket.io": "^4.0.1",
     "vue": "^2.6.12"
   },
   "devDependencies": {},
   "scripts": {
-    "start":"node main.js"
+    "start": "node main.js"
   },
   "author": "",
   "license": "ISC"
