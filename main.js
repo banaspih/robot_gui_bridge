@@ -10,9 +10,9 @@ const express = require('express')
 const app = express()
 //const socketio = require('socket.io')
 
-const http = require('http')
+// const http = require('http')
 
-const server = http.createServer(app)
+// const server = http.createServer(app)
 ////const io = socketio(server)
 //const vueApp = require('./robot-connect/connect')
 
