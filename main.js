@@ -5,6 +5,8 @@ const path = require('path')
 const hbs = require('hbs')
 const port = process.env.PORT || 3000
 const express = require('express')
+
+//const exphbs = require('express-handlebars')
 const app = express()
 const socketio = require('socket.io')
 
@@ -14,11 +16,24 @@ const server = http.createServer(app)
 const io = socketio(server)
 //const vueApp = require('./robot-connect/connect')
 
-const publicDirectoryPath = path.join(__dirname, '../template')
+const publicDirectoryPath = path.join(__dirname, '../gui/template')
 app.use(express.static(publicDirectoryPath))
 
-const index = path.join(__dirname, '../template/index')
-hbs.registerPartials(index)
+const index = path.join(__dirname, '../gui/robot-connect/index')
+const header = path.join(__dirname, '../gui/robot-connect/header')
+//app.engine('handlebars', exphbs())
+//app.set('view engine', 'handlebars')
+app.set('view engine', 'hbs')
+app.set('views', index)
+hbs.registerPartials(header)
+
+app.get('', (req, res) => {
+  res.render('index', {
+      title: 'rosbridge',
+      name: 'test'
+  })
+})
+
 
 module.exports = {
   runtimeCompiler: true
