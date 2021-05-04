@@ -8,12 +8,12 @@ const express = require('express')
 
 //const exphbs = require('express-handlebars')
 const app = express()
-const socketio = require('socket.io')
+//const socketio = require('socket.io')
 
 const http = require('http')
 
 const server = http.createServer(app)
-const io = socketio(server)
+////const io = socketio(server)
 //const vueApp = require('./robot-connect/connect')
 
 const publicDirectoryPath = path.join(__dirname, '../gui/template')
@@ -43,12 +43,12 @@ module.exports = {
 
 
 
-io.on('connection', ()=> {
-  console.log('New Websocket connection')
-})
+// io.on('connection', ()=> {
+//   console.log('New Websocket connection')
+// })
 
 
-server.listen(port, () => {
+app.listen(port, () => {
   console.log('Serving is up on' +port )
 })
 
