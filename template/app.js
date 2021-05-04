@@ -1,4 +1,4 @@
-const vueApp = require("../robot-connect/connect")
+const vueApp = require("../connecting/connect")
 
 const ws = document.querySelector('form')
 //const con = document.querySelector('connect')

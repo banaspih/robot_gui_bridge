@@ -1,4 +1,5 @@
 const Vue = require("vue") 
+const ros = require('ros')
 
 
 let vueApp = new Vue({
