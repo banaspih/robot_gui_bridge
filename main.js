@@ -35,9 +35,6 @@ app.get('', (req, res) => {
 })
 
 
-module.exports = {
-  runtimeCompiler: true
-}
 
 
 
